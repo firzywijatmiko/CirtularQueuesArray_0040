@@ -61,7 +61,7 @@ public:
 		int FRONT_position = FRONT;
 		int REAR_position = REAR;
 
-		//cek apakah antrian kosong
+		//cek apakah antrian kosong 
 		if (FRONT == -1) {
 			cout << "Quesu is empty\n";
 				return;
