@@ -112,7 +112,7 @@ int main() {
 				q.remove();
 				break;
 			}
-			case '3': {
+			case '3': { 
 				q.display();
 				break;
 			}
