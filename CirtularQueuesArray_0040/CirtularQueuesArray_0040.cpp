@@ -37,14 +37,13 @@ public:
 		queue_array[REAR] = num;
 	};
 	void remove() {
-		//
-		if (FRONT == -1) {
-			cout << "Queue underflow\n";
-			return;
+		// cek apakah antrian kosong
+		if (FRONT == -1){
+
 		}
 		cout << "nThe element deleted from the Queue is; " << queue_array[FRONT] << "\n";
 
-		//
+		// 
 		if (FRONT == REAR) {
 			FRONT == -1;
 			REAR == -1;
@@ -59,5 +58,19 @@ public:
 	}
 
 	void dsplay() {
-		int FRONT_pesition = FRONT;
+		int FRONT_position = FRONT;
+		int REAR_position = REAR;
+
+		//cek apakah antrian kosong
+		if (FRONT == -1) {
+			cout << "Quesu is empty\n";
+				return;
+		}
+
+		cout << "\nlEmen   the queue...\n";
+			// jika front _ position <==rear_positin, interasi dari front himgga rear
+			if (FRONT_position <= REAR_position) {
+				while  (FRONT_position
+
+
 
