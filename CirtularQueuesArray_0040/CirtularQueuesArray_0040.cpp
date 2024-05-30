@@ -12,9 +12,9 @@ public:
 	}
 
 	void insert() {
-		int num; 
+		int num;
 		cout << "Enter a number: ";
-		cin >> num; 
+		cin >> num;
 		cout << endl;
 
 		if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1)) {
@@ -26,7 +26,7 @@ public:
 			FRONT = 0;
 			REAR = 0;
 		}
-		
+
 		else {
 			// Jika REAR berada di posisi terakhir array, kembali ke awal array
 			if (REAR == max - 1)
@@ -35,3 +35,29 @@ public:
 				REAR = REAR + 1;
 		}
 		queue_array[REAR] = num;
+	};
+	void remove() {
+		//
+		if (FRONT == -1) {
+			cout << "Queue underflow\n";
+			return;
+		}
+		cout << "nThe element deleted from the Queue is; " << queue_array[FRONT] << "\n";
+
+		//
+		if (FRONT == REAR) {
+			FRONT == -1;
+			REAR == -1;
+		}
+		else {
+			//
+			if (FRONT == max - 1)
+				FRONT = 0;
+			else
+				FRONT = FRONT + 1;
+		}
+	}
+
+	void dsplay() {
+		int FRONT_pesition = FRONT;
+
