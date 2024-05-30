@@ -64,13 +64,46 @@ public:
 		//cek apakah antrian kosong 
 		if (FRONT == -1) {
 			cout << "Quesu is empty\n";
-				return;
+			return;
 		}
 
 		cout << "\nlEmen   the queue...\n";
-			// jika front _ position <==rear_positin, interasi dari front himgga rear
-			if (FRONT_position <= REAR_position) {
-				while  (FRONT_position
+		// jika front _ position <==rear_positin, interasi dari front himgga rear
+		if (FRONT_position <= REAR_position) {
+			while (FRONT_position <= REAR_postion) {
+				cout << queue_array[FRONT_position] << "   ";
+				FRONT_position++;
+			}
+			cout << endl;
+		}
+		else {
+			// Jika FRONT_position <= REAR_postion, iterasi dari FRONT hingga REAR
+			while (FRONT_position <= max - 1) {
+				cout << queue_array[FRONT_position] << "   ";
+				FRONT_position++;
+			}
 
+			FRONT_position = 0;
 
+			// Iterasi dari awal array hingga REAR
+			while (FRONT_position <= REAR_postion) {
+				cout << queue_array[FRONT_position] << "   ";
+				FRONT_position++;
+			}
+			cout << endl;
+		}
+	};
 
+		int main(){
+				Quesues q;
+				char ch;
+
+				while (true) {
+					try {
+						cout << "menu" << endl;
+						cout << "1. implement insert opration" << endl;
+						cout << "2.implement insert opration" << endl;
+						cout << "3. dispaly values" << endl;
+						cout << "4.  exit" << endl;
+						cout << "5, enter your choise (1-4):" << endl;
+							
